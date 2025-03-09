@@ -1,0 +1,76 @@
+
+//// See https://aka.ms/new-console-template for more information
+//Console.WriteLine("Hello, World!");
+
+//int idade = 26;
+//double salario = 5000.55;
+//string nome = "jorge";
+//char sexo = 'M';
+//bool ativo = true;
+
+//// (var é a classe polimorfa que aceita qualquer valor )Ex: {var xyz = 0;} ou {var xyz = 'a'}
+
+//Console.WriteLine("olá");
+//Console.WriteLine("Mundo");
+
+//Console.Write("olá");
+//Console.Write("mundo");
+
+//Console.WriteLine("\n\nNome: " + nome + "Salário: " + salario + "Idade: " + idade);
+
+//Console.WriteLine($"Nome: {nome} Salário: {salario}.");
+
+//Console.WriteLine("Nome: {0} Salário{1}", nome, salario);
+////exibir clicar em gerenciador de soluções
+
+//// operadores aritméticos + - * / %
+//// += -= /= *= %=
+//// ++ --
+//// divisão
+////var x = 2 / 3.0; (divisão de número inteiro tem que indicar a casa decimal .0)
+
+//Console.Clear();
+
+//int x = 10;
+//Console.WriteLine(x);// 10
+//Console.WriteLine(x++); // x++ = soma e depois adciona a variavel, ++x soma depois exibe
+//Console.WriteLine(x);
+
+//// comentar tud ctrl + k + c tirar o comentario ctrl + k + u
+
+string nome;
+int numero;
+double salario;
+bool ativo;
+char sexo;
+
+Console.WriteLine("Digite o nome:");
+nome = Console.ReadLine();
+Console.WriteLine(nome);
+Console.WriteLine("-------------------");
+
+Console.WriteLine("Digite o número: ");
+numero = int.Parse(Console.ReadLine()); 
+Console.WriteLine(numero);
+Console.WriteLine("-------------------");
+
+Console.WriteLine("Digite o valor do salário");
+salario = double.Parse(Console.ReadLine());
+Console.WriteLine(salario);
+Console.WriteLine("-------------------");
+
+
+Console.WriteLine("Digite M ou F");
+sexo = Convert.ToChar(Console.ReadLine());
+Console.WriteLine(sexo); 
+Console.WriteLine("-------------------");
+
+Console.WriteLine("Ativo? true/false");
+ativo = bool.Parse(Console.ReadLine());
+Console.WriteLine(ativo);
+Console.WriteLine("-------------------");
+
+Console.WriteLine(ativo ? "ativo " : "Inativo");
+
+
+

@@ -1,0 +1,227 @@
+atividades do Dionísio 1
+
+atividades adaptação à linguagem
+
+1) Meses do ano
+
+Console.Write("Digite um número de 1 a 12: ");
+int numero = Convert.ToInt32(Console.ReadLine());
+switch (numero)
+{
+case 1: Console.WriteLine("O mês correspondente é Janeiro.");
+break;
+case 2: Console.WriteLine("O mês correspondente é Fevereiro.");
+break;
+case 3: Console.WriteLine("O mês correspondente é Março.");
+break;
+case 4: Console.WriteLine("O mês correspondente é Abril.");
+break;
+case 5: Console.WriteLine("O mês correspondente é Maio.");
+break;
+case 6: Console.WriteLine("O mês correspondente é Junho.");
+break;
+case 7: Console.WriteLine("O mês correspondente é Julho.");
+break;
+case 8: Console.WriteLine("O mês correspondente é Agosto.");
+break;
+case 9: Console.WriteLine("O mês correspondente é Setembro.");
+break;
+case 10: Console.WriteLine("O mês correspondente é Outubro.");
+break;
+case 11: Console.WriteLine("O mês correspondente é Novembro.");
+break;
+case 12: Console.WriteLine("O mês correspondente é Dezembro.");
+break;
+default: Console.WriteLine("Número inválido! Digite um número de 1 a 12.");
+break;
+}
+
+------------------------------------------------------------------------------
+
+2) calculo de imc 
+
+double altura;
+
+Console.WriteLine("Digite a altura:");
+altura = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+double peso;
+
+Console.WriteLine("Digite o peso:");
+peso = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+double imc = peso / (altura * altura);
+
+if (imc <= 18.5)
+{
+    Console.WriteLine($"{imc:F2}: você está abaixo do peso");
+}
+else if (imc <= 24.9)
+{
+    Console.WriteLine($"{imc:F2}: você está com o peso normal");
+}
+else if (imc <= 29.9)
+{
+    Console.WriteLine($"{imc:F2}: você está com sobrepeso");
+}
+else
+{
+    Console.WriteLine($"{imc:F2}: você tem obesidade");
+}
+
+--------------------------------------------------------------
+
+3) verifica se é um ano bissexto
+
+int ano;
+
+Console.WriteLine("Digite o ano:");
+ano = int.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+
+      if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0))
+        {
+            Console.WriteLine($"{ano} é um ano bissexto.");
+        }
+        else
+        {
+            Console.WriteLine($"{ano} não é um ano bissexto.");
+        }
+
+--------------------------------------------------------
+
+4)Calculo de desconto
+
+double valor;
+double desconto;
+
+Console.WriteLine("Digite o valor do produto:");
+valor = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+ if ((valor >= 100)
+        {
+		desconto = valor * 0.1;
+            Console.WriteLine($"seu produto custa: {valor}, seu desconto será de {desconto}.");
+        }
+        else
+        {
+		desconto = valor * 0.05;
+            Console.WriteLine($"seu produto custa: {valor}, seu desconto será de: {desconto}.");
+        }
+
+-----------------------------------------------------------------------------------------
+
+5) Lados de um triângulo
+
+int ladoA;
+
+Console.WriteLine("Digite o valor do Lado A do triângulo:");
+while (!int.TryParse(Console.ReadLine(), out ladoA) || ladoA <= 0)
+        {
+            Console.WriteLine("Valor inválido! Digite um número inteiro positivo:");
+        }
+        Console.WriteLine("-------------------");
+
+int ladoB;
+
+Console.WriteLine("Digite o valor do Lado B do triângulo:");
+while (!int.TryParse(Console.ReadLine(), out ladoB) || ladoB <= 0)
+        {
+            Console.WriteLine("Valor inválido! Digite um número inteiro positivo:");
+        }
+        Console.WriteLine("-------------------");
+
+int ladoC;
+
+Console.WriteLine("Digite o valor do Lado C do triângulo:");
+while (!int.TryParse(Console.ReadLine(), out ladoC) || ladoC <= 0)
+        {
+            Console.WriteLine("Valor inválido! Digite um número inteiro positivo:");
+        }
+        Console.WriteLine("-------------------");
+
+ if (ladoA + ladoB > ladoC && ladoA + ladoC > ladoB && ladoB + ladoC > ladoA)
+        {
+            if (ladoA == ladoB && ladoB == ladoC)
+            {
+                Console.WriteLine("Todos os lados do triângulo são iguais. Ele é equilátero.");
+            }
+            else if (ladoA == ladoB || ladoA == ladoC || ladoB == ladoC)
+            {
+                Console.WriteLine("Dois lados do seu triângulo são iguais. Ele é um isósceles.");
+            }
+            else
+            {
+                Console.WriteLine("Todos os lados são diferentes. Ele é um escaleno.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Os valores informados não formam um triângulo válido.");
+        }
+    }
+}
+-----------------------------------------------------------
+
+6) ordem crescente de 3 números
+
+
+double numeroA;
+
+Console.WriteLine("Digite o primeiro número:");
+numeroA = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+double numeroB;
+
+Console.WriteLine("Digite o segundo número:");
+numeroB = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+double numeroC;
+
+Console.WriteLine("Digite o último número:");
+numeroC = double.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+if(numeroA > numeroB && numeroB > numeroC)
+{
+	Console.WriteLine($"ordem dos números: {numeroA}, {numeroB} e {numeroC}.");
+} 
+else if(numeroA > numeroC && numeroC > numeroB)
+{
+	Console.WriteLine($"ordem dos números: {numeroA}, {numeroC} e {numeroB}.");
+} 
+//------------------------------------------------------------------------------------
+else if(numeroB > numeroA && numeroA > numeroC)
+{
+	Console.WriteLine($"ordem dos números: {numeroB}, {numeroA} e {numeroC}.");
+} 
+else if(numeroB > numeroC && numeroC > numeroA)
+{
+	Console.WriteLine($"ordem dos números: {numeroB}, {numeroC} e {numeroA}.");
+} 
+//------------------------------------------------------------------------------------
+else if(numeroC > numeroA && numeroA > numeroB)
+{
+	 Console.WriteLine($"ordem dos números: {numeroC}, {numeroA} e {numeroB}.");
+}
+else if(numeroC > numeroB && numeroB > numeroA)
+{
+	Console.WriteLine($"ordem dos números: {numeroC}, {numeroB} e {numeroA}.");
+} 
+//------------------------------------------------------------------------------------
+else
+{
+	Console.WriteLine($"Todos os números são iguais.");
+}
+
+
+-------------------------------------------------------------------------------------
+
+
+

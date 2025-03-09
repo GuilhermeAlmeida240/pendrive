@@ -1,0 +1,18 @@
+aula de C-Sharp
+
+	-------> abstract
+|  Prof |	| Pessoa |			   |  End   |
+|Salário|	|  Nome  |			   |  Rua   |
+|  CTR  |	|  Idade |			   | número |
+|  Get  |	|  Rg    |			   | cidade |
+|  Set  |	|  Cpt   |-----------------------> |  Ctr   |
+		|________|			   |  Get   |
+		|  CTr   |			   |  Set   |
+		|  Get   |
+		|  Set   | <----------
+				|   Aluno   |
+				| Matricula |--------> | curso |------------> | conteúdo |
+				|    Ctr    |
+				|    Get    |
+				|    Set    |
+

@@ -1,0 +1,71 @@
+Pessoa.cs
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace teste // local onde o arquivo é salvo
+{
+    class Pessoa //classe sempre com letra maiúscula
+    {
+        //primeira maneira
+
+        private string nome;
+
+        public string getNome()
+        {
+            return nome;
+        }
+
+        public void setNome(string nome)
+        {
+            this.nome = nome;
+        }
+
+        // segnda maneira
+
+        public int Idade { get; set; } // primeira letra maiúscula Idade
+
+        //------------------
+
+        private double peso; // ctrl + r + e = tecla de automoção
+        public double Peso { get => peso; set => peso = value; }
+
+        //------------------
+
+        public Pessoa(string nome, int idade, double peso)
+        {
+            this.nome = nome;
+            Idade = idade;
+            this.peso = peso;
+        }
+
+        public string Resposta()
+        {
+            return $"Nome: {nome} Idade: {Idade} peso: {peso}.";
+        }
+    }
+}
+
+-----------------------------------------
+
+Program.cs
+
+using teste;
+
+Pessoa p = new Pessoa("JUCA", 55, 88.0); //classe construtora = Pessoa(), dado abstrato = Pessoa p
+//-----------------------
+
+//p.setNome("JUCA");
+//Console.WriteLine("Nome: " + p.getNome());
+//-----------------------
+
+//p.Idade = 55;
+//Console.WriteLine("Idade: " + p.Idade);
+
+//p.Peso = 88;
+//Console.WriteLine("Peso: " + p.Peso);
+
+Console.WriteLine(p.Resposta());

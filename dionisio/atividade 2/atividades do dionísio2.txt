@@ -1,0 +1,38 @@
+atividades do dionísio2
+
+atividades adaptação à linguagem
+
+1)Contagem de 1 a 100
+
+Console.WriteLine("Contagem de 1 a 100:");
+
+        for (int i = 1; i <= 100; i++) // Adicionado o incremento (i++)
+        {
+            Console.WriteLine(i); 
+
+            if (i % 2 != 0)
+            {
+                Console.WriteLine($"{i} é ímpar.");
+            }
+        }
+
+--------------------------------------------------------------------------------
+
+
+2)tabuada de um número
+
+int valor;
+
+Console.Write("Digite um número: ");
+valor = int.Parse(Console.ReadLine());
+Console.WriteLine("-------------------");
+
+  Console.WriteLine($"Tabuada do {valor}:");
+        for (int i = 1; i <= 10; i++)
+        {
+            int resultado = valor * i;
+            Console.WriteLine($"{valor} x {i} = {resultado}");
+        }
+    }
+}
+

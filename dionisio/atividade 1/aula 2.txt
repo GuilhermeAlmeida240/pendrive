@@ -1,0 +1,57 @@
+aula 2
+
+int numero = 5;
+
+string parImpar = (!(numero % 2 == 0)) ? "Par" : "Impar";
+Console.WriteLine(parImpar);
+
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+//aula 2
+
+int numero = 5;
+
+string parImpar = (!(numero % 2 == 0)) ? "Par" : "Impar";
+Console.WriteLine(parImpar);
+
+int diaDaSemana;
+diaDaSemana = int.Parse(Console.ReadLine());
+
+if (diaDaSemana == 1)
+{
+    Console.WriteLine("Domingo");
+} else if (diaDaSemana == 2)
+{
+    Console.WriteLine("segunda");
+} else if (diaDaSemana == 3)
+{
+    Console.WriteLine("terça");
+}
+else
+{
+    Console.WriteLine("Dia não encontrado");
+}
+
+switch (diaDaSemana)
+{
+    case 1:
+        Console.WriteLine("Domingo");
+        break;
+    case 2:
+        Console.WriteLine("Domingo");
+        break;
+    case 3:
+        Console.WriteLine("Domingo");
+        break;
+    case 4:
+        Console.WriteLine("Domingo");
+        break;
+    default:
+        Console.WriteLine("Dia não encontrado");
+        break;
+
+
+}
+
+switch serve para casos exatos
+do while roda pelo menos uma vez 
