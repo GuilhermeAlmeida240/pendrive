@@ -1,0 +1,31 @@
+aula 1
+
+const express = require('express')// import express
+const app = express() //Criação de uma instância do express
+
+//Rota 1 - Raiz do projeto
+// get é um metodo do express responsavel por exibir algo na tela
+// get recebe dois parametros , o primeiro é a rota e o segundo é uma função de callback
+// req é a requisição que o cliente faz ao servidor 
+// res é a resposta que o servidor envia ao cliente 
+    app.get('/', (req, res) => {
+        res.send('Raiz do projeto')
+    });
+
+    //Rota 2 
+    app.get('/contato', (req, res) => {
+        res.send('Contato')
+    });
+
+// Inicializar na porta 3000
+app.listen(4000, (erro) =>{
+    if (erro) {
+        console.log('Server is not running')
+    } else {
+        console.log('Server is running on port 4000')
+    }
+});
+
+// node index.js executar projeto
+// na barra de pesquisa escrever localhost:4000
+// na barra de pesquisa escrever localhost:4000/contato para ir para próxima página.
